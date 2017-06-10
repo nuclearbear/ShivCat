@@ -1,0 +1,38 @@
+<!DOCTYPE HTML5>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Client ShiveCat</title>
+</head>
+<body>
+  <div class="app-container">
+    <div class="app-window" id="app">
+      <header class="app-controls">
+
+      </header>
+      <main class="app-chat">
+        <div class="message">
+          <span class="time">14:53</span>
+          <a href="/user"><img class="photo" src=""/></a>
+          <div clsas="text">
+            Hi there! How are you? Did you already used ShiveCat?
+          </div>
+        </div>
+      </main>
+      <form class="app-message-editor">
+        <div class="app-editor-uploadfile">
+          <img src="#" />
+        </div>
+        <input type="text" class="message-input" name="message" placeholder="Type here..." />
+        <button type="submit" class="send-message">Sent</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Socket.IO library required to transfer data in real-time -->
+  <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+
+  <!-- Application code. Use pure JavaScript and socket.io library -->
+  <script src="app/main.js"></script>
+</body>
+</html>
