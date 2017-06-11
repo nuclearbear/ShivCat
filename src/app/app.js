@@ -1,4 +1,7 @@
 (function(){
+    // Socket.IO library
+    var socket = io();
+
     var formElement  = document.getElementById("send-form");
     var messageInput = document.getElementById("textField");
 
@@ -8,6 +11,19 @@
 
     var flushForm = function () {
         messageInput.value = "";
+    }
+
+    var sendMessage = function (user, message, sendConfirmation) {
+        socket.emit(user, message, function (data) {
+            var messageView = getView(message.id);
+            markMessageAsSent(messageView);
+
+            sendConfirmation();
+        });
+    }
+
+    var markMessageAsSent = function (message) {
+        message.className += "read"
     }
 
     var getTime = function () {
@@ -40,6 +56,8 @@
         var message = createMessage(messageText, time);
 
         chatField.innerHTML = chatHtml + message;
+        
+        sendMessage("test", message);
         flushForm();
     }, false);
 })()

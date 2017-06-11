@@ -1,0 +1,36 @@
+<!DOCTYPE HTML5>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Client ShiveCat</title>
+  <link rel="stylesheet" href="http://icono-49d6.kxcdn.com/icono.min.css">
+  <link rel="stylesheet" type="text/css" href="./app/styles/start-app.css">
+</head>
+<body>
+  <div class="app-container">
+    <div class="app-window" id="app">
+        <div class="center application-form-wrapper">
+            <form method="POST" id="login" class="application-login-form">
+                <div class="form-field">
+                    <!-- TODO: Add pictures for icon-user span as background style rule-->
+                    <span class="icon-user"></span>
+                    <input type="text" class="application-validate" id="login" 
+                    placeholder="E-mail" />
+                </div>
+                <div class="form-field">
+                    <!-- TODO: The same here but for password -->
+                    <span class="icon-password"></span>
+                    <input type="password" class="application-validate" placeholder="Passwrod" /> 
+                </div>
+                <footer class="application-footer-control">
+                    <button type="submit" class="btn btn-login" id="singin">Login</button>
+                    <button type="submit" class="btn btn-forget" id="forgetpass">Forgot a password?</button>
+                </footer>
+            </form>  
+        </div> 
+    </div>
+  </div>
+  <!-- Application code. Use pure JavaScript and socket.io library -->
+  <script src="app/registration.js"></script>
+</body>
+</html>
