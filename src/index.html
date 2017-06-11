@@ -3,27 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <title>Client ShiveCat</title>
+  <link rel="stylesheet" href="http://icono-49d6.kxcdn.com/icono.min.css">
+  <link rel="stylesheet" type="text/css" href="./app/assests/private-chat.css">
 </head>
 <body>
   <div class="app-container">
     <div class="app-window" id="app">
       <header class="app-controls">
-
+        <a class="icono-caretLeft" href="/back"></a>
+        <h4>John Doe</h4>
+        <a href="/contact-settings" class="app-contact-setting icono-sliders"></a>
       </header>
-      <main class="app-chat">
+      <main class="app-chat" id="chat">
         <div class="message">
-          <span class="time">14:53</span>
+          <span class="time">12:53</span>
           <a href="/user"><img class="photo" src=""/></a>
           <div clsas="text">
             Hi there! How are you? Did you already used ShiveCat?
           </div>
         </div>
-      </main>
-      <form class="app-message-editor">
-        <div class="app-editor-uploadfile">
-          <img src="#" />
+          <div class="message">
+          <span class="time">13:53</span>
+          <a href="/user"><img class="photo" src=""/></a>
+          <div clsas="text">
+            No, I never used it. How is it?
+          </div>
         </div>
-        <input type="text" class="message-input" name="message" placeholder="Type here..." />
+        <div class="message">
+          <span class="time">14:53</span>
+          <a href="/user"><img class="photo" src=""/></a>
+          <div clsas="text">
+            Actually, it's awesome. I would recommend it.
+          </div>
+        </div>
+      </main>
+      <form class="app-message-editor" id="send-form">
+        <div class="app-editor-uploadfile">
+          <a class="icono-paperClip" href="#"></a>
+        </div>
+        <input id="textField" type="text" class="message-input" name="message" placeholder="Type here..." />
         <button type="submit" class="send-message">Sent</button>
       </form>
     </div>
@@ -33,6 +51,6 @@
   <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
 
   <!-- Application code. Use pure JavaScript and socket.io library -->
-  <script src="app/main.js"></script>
+  <script src="app/app.js"></script>
 </body>
 </html>

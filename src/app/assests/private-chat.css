@@ -1,0 +1,91 @@
+
+body {
+  background-color: black;
+}
+
+div.app-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 360px;
+  height: 480px;
+  background-color: rgba(220, 100, 50, 1);
+  position: relative;
+}
+
+header.app-controls {
+  background: white;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+header.app-controls a, header.app-controls a img, header.app-controls h4 {
+  display: inline-block;
+}
+
+header.app-controls a.app-contact-setting {
+  position: absolute;
+  right: 10px;
+  top: 13px;
+}
+
+
+div.message {
+  background-color: white;
+  border: 1px solid rgba(200, 200, 200, 0.8);
+  border-top-right-radius: 8px;
+  width: 300px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 7px;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+div.message span.time {
+  font-size: 0.8em;
+  color: rgb(200, 200, 200);
+}
+
+form.app-message-editor {
+  width: 100%;
+  background-color: white;
+  margin-bottom: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  bottom: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/** Send message button **/
+button.send-message {
+  background-color: #009688!important;
+  border: none;
+  padding: 8px 16px;
+  color: rgb(250, 250, 250);
+  font-size: 1.1em;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #444;
+  margin-left: 15px;
+  cursor: pointer;
+  text-align: center;
+}
+
+div.app-editor-uploadfile {
+  display: inline-block;
+  height: 38px;
+  margin-right: 15px;
+}
+
+input.message-input {
+    padding: 10px;
+    border: 1px solid rgba(200, 200, 200, 0.8);
+    font-size: 14px;
+}
